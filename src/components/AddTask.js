@@ -9,14 +9,12 @@ function AddTask() {
     const dispatch= useDispatch()
     const [input, setInput] =useState("")
     const handleChange = e => setInput(e.target.value)
-    const handleClick = () => {dispatch({
-        type:  "ADD_TASK",
-        payload: {
-            id: Date.now(),
-            description: input,
-            done: false
-        }
-    },
+  
+    const handleClick = (post) => {dispatch(addTask(post={
+        id: Date.now(),
+        description: input,
+        done: false
+    }),
     setInput(""))}
     
 
